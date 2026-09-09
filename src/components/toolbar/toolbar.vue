@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .toolbar {
   background: rgba(255, 255, 255, 0.65) !important;
   backdrop-filter: blur(10px);

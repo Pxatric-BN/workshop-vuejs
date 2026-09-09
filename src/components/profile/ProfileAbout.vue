@@ -1,4 +1,3 @@
-```vue
 <template>
   <v-card flat class="profile-about">
     <v-card-text class="profile-about-content">
@@ -21,7 +20,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .profile-about {
   width: 100%;
   border-radius: 18px;
@@ -47,4 +46,4 @@ export default {
   color: #777777;
 }
 </style>
-```
+

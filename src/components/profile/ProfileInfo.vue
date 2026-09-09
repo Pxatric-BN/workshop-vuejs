@@ -102,7 +102,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .info-card {
   background: #ffffff;
 }

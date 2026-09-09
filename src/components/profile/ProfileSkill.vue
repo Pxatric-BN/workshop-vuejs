@@ -53,7 +53,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .profile-skill {
   width: 100%;
   border-radius: 18px;

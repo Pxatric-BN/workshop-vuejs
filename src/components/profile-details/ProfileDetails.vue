@@ -77,7 +77,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
 .profile-details {
   display: flex;

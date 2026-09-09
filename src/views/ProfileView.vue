@@ -1,20 +1,17 @@
 <template>
   <div class="profile-page">
     <v-container>
-      <v-row>
+      <v-row class="profile-row">
         <v-col
-          cols="12"
-          md="4"
-          lg="4"
+          cols="4"
           class="profile-style"
         >
           <ProfileCard />
         </v-col>
 
         <v-col
-          cols="12"
-          md="8"
-          lg="8"
+          cols="8"
+          class="profile-content-col"
         >
           <div class="profile-content">
             <ProfileAbout />
@@ -47,26 +44,45 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .profile-page {
   min-height: 100vh;
   background: #eeeeee;
   padding: 40px 0;
 }
 
+.profile-row {
+  display: flex;
+  align-items: stretch;
+}
+
 .profile-style {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
+}
+
+.profile-style > * {
+  width: 100%;
+}
+
+.profile-content-col {
+  display: flex;
 }
 
 .profile-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
+  height: 100%;
 }
-.profile-detail{
-  margin-top: 20px
+
+.profile-content > * {
+  flex: 1;
+}
+
+.profile-detail {
+  margin-top: 20px;
 }
 
 </style>
