@@ -4,8 +4,8 @@
       <v-col cols="6" class="profile-style">
         <ProfileCard />
       </v-col>
-      <v-col cols="6">
-
+      <v-col cols="6" class="profile-style">
+        <ProfileDetail />
       </v-col>
     </v-row>
   </div>
@@ -13,12 +13,14 @@
 
 <script>
 import ProfileCard from '@/components/profile/ProfileCard.vue'
+import ProfileDetail from '../components/profile-details/ProfileDetails.vue'
 
 export default {
   name: 'Profile',
 
   components: {
-    ProfileCard
+    ProfileCard,
+    ProfileDetail
   }
 }
 </script>
