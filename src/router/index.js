@@ -9,12 +9,17 @@ const routes = [
   {
     path: '',
     name: 'toolbar',
-    component: () => import('../views/Toolbar.vue'),
+    component: () => import('../components/toolbar/toolbar.vue'),
     children:[
      {
         path: '/profile',
         name: 'profile',
         component: () => import(/* webpackChunkName: "about" */ '../views/ProfileView.vue')
+      },
+      {
+        path: '/grade',
+        name: 'grade',
+        component: () => import(/* webpackChunkName: "about" */ '../views/GradeView.vue')
       },
       {
         path: '/',
