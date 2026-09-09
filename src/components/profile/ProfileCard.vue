@@ -21,7 +21,8 @@ export default {
 
 <style scoped>
 .profile-card {
-  width: 350px;
+  width: 100%;
+  max-width: 400px;
   border-radius: 18px;
   overflow: visible;
   background: #ffffff;
