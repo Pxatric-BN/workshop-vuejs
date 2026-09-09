@@ -25,9 +25,64 @@
               outlined
               small
               class="getintouch-button"
+              @click="dialog=true"
             >
              GET IN TOUCH
             </v-btn>
+            <v-dialog
+              v-model="dialog"
+              max-width="400"
+            >
+              <v-card rounded="lg">
+                <v-card-title class="text-h6">
+                  Get in touch
+                </v-card-title>
+
+                <v-card-text>
+                  <div>
+                    <v-icon color="black" >
+                      mdi-email-outline
+                    </v-icon>
+
+                    <div>
+                      <div class="text-caption text-grey">
+                        Email
+                      </div>
+                      <div>
+                        chayanon.ban@one.th
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <v-icon color="black" >
+                      mdi-phone-outline
+                    </v-icon>
+
+                    <div>
+                      <div class="text-caption text-grey">
+                        Phone
+                      </div>
+                      <div>
+                        061-741-1604
+                      </div>
+                    </div>
+                  </div>
+                </v-card-text>
+
+                <v-card-actions>
+                  <v-spacer />
+
+                  <v-btn
+                    variant="text"
+                    color="error"
+                    @click="dialog = false"
+                  >
+                    Close
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
           </div>
         </v-col>
       </v-row>
@@ -38,7 +93,12 @@
 
 <script>
 export default {
-  name: 'ProfileInfo'
+  name: 'ProfileInfo',
+  data(){
+    return {
+      dialog: false
+    }
+  }
 }
 </script>
 
