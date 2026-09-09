@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .profile-card {
   width: 100%;
   max-width: 400px;

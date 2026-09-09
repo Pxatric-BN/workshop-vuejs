@@ -2,7 +2,7 @@
   <div class="profile-header">
 
     <img
-      class="header-background"
+      class="banner"
       src="https://i.pinimg.com/736x/cf/e2/17/cfe2172e5036d70c43ab7179d4fa7954.jpg"
       alt="Profile banner"
     />
@@ -24,18 +24,17 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .profile-header {
   position: relative;
   height: 155px;
   padding: 10px;
 }
 
-.header-background {
+.banner {
   width: 100%;
   height: 115px;
   border-radius: 14px;
-
   object-fit: cover;
   object-position: center;
 }

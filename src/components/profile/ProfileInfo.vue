@@ -25,43 +25,84 @@
               outlined
               small
               class="getintouch-button"
+              @click="dialog=true"
             >
              GET IN TOUCH
             </v-btn>
+            <v-dialog
+              v-model="dialog"
+              max-width="400"
+            >
+              <v-card rounded="lg">
+                <v-card-title class="text-h6">
+                  Get in touch
+                </v-card-title>
+
+                <v-card-text>
+                  <div>
+                    <v-icon color="black" >
+                      mdi-email-outline
+                    </v-icon>
+
+                    <div>
+                      <div class="text-caption text-grey">
+                        Email
+                      </div>
+                      <div>
+                        chayanon.ban@one.th
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <v-icon color="black" >
+                      mdi-phone-outline
+                    </v-icon>
+
+                    <div>
+                      <div class="text-caption text-grey">
+                        Phone
+                      </div>
+                      <div>
+                        061-741-1604
+                      </div>
+                    </div>
+                  </div>
+                </v-card-text>
+
+                <v-card-actions>
+                  <v-spacer />
+
+                  <v-btn
+                    variant="text"
+                    color="error"
+                    @click="dialog = false"
+                  >
+                    Close
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
           </div>
         </v-col>
       </v-row>
-      <v-card
-        flat
-        class="about-card"
-      >
-        <v-card-text class="about-content">
-
-          <div class="about-title">
-            About
-          </div>
-
-          <div class="about-text">
-            Hi, I'm Chayanon (Guy), a Software Engineer
-            at INET Hatyai. I'm passionate about software
-            development, learning new technologies, and
-            building impactful applications.
-          </div>
-
-        </v-card-text>
-      </v-card>
-
+  
     </v-card-text>
   </v-card>
 </template>
 
 <script>
 export default {
-  name: 'ProfileInfo'
+  name: 'ProfileInfo',
+  data(){
+    return {
+      dialog: false
+    }
+  }
 }
 </script>
 
-<style scoped>
+<style>
 .info-card {
   background: #ffffff;
 }
@@ -92,29 +133,6 @@ export default {
   font-size: 12px ;
   background-color: #222222;
   color: #ffffff;
-}
-
-.about-card {
-  margin-top: 15px;
-  border-radius: 12px;
-  background: #f8f8f8;
-}
-
-.about-content {
-  padding: 12px;
-}
-
-.about-title {
-  margin-bottom: 5px;
-  font-size: 13px;
-  font-weight: 700;
-  color: #333333;
-}
-
-.about-text {
-  font-size: 12px;
-  line-height: 1.6;
-  color: #777777;
 }
 </style>
 
