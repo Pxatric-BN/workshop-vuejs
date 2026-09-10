@@ -91,7 +91,7 @@
   </v-card>
 </template>
 
-<script>
+<script >
 export default {
   name: 'ProfileInfo',
   data(){
@@ -102,7 +102,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .info-card {
   background: #ffffff;
 }

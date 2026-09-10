@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped> 
 .avatar-wrapper {
   position: absolute;
   left: 20px;
