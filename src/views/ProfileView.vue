@@ -39,7 +39,8 @@ export default {
     ProfileCard,
     ProfileAbout,
     ProfileSkill,
-    ProfileDetail
+    ProfileDetail,
+    
   }
 }
 </script>

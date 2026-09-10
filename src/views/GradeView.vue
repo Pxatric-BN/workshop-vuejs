@@ -1,15 +1,18 @@
 <template>
   <div class="grade-page">
-    <h1>
-        This is Grade Evaluation page
-    </h1>
+    <Grade_Eva />
   </div>
 </template>
 
 <script>
-  
+  import Grade_Eva from '@/components/grade/Grade.vue'
+
   export default {
-    name: 'Grade'
+    name: 'Grade',
+    components: {
+    Grade_Eva
+  }
+    
   }
 </script>
 
