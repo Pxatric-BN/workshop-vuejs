@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .profile-header {
   position: relative;
   height: 155px;

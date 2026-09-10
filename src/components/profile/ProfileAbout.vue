@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .profile-about {
   width: 100%;
   border-radius: 18px;

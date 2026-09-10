@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .profile-page {
   min-height: 100vh;
   background: #eeeeee;
