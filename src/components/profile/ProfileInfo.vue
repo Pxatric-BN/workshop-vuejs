@@ -1,138 +1,69 @@
 <template>
   <v-card
     flat
-    class="info-card"
+    class="product-card"
   >
+    <img
+      class="product-image"
+      :src="product.image"
+      :alt="product.product_name"
+    />
+
     <v-card-text>
-      <v-row
-        align="center"
-        justify="space-between"
-        no-gutters
-      >
-        <v-col cols="auto">
-          <div class="name">
-            Chayanon Banyen
-          </div>
+      <div class="product-name">
+        {{ product.product_name }}
+      </div>
 
-          <div class="username">
-            @INET Hatyai
-          </div>
-        </v-col>
+      <div class="product-description">
+        {{ product.product_description }}
+      </div>
 
-        <v-col cols="auto">
-          <div class="actions">
-            <v-btn
-              outlined
-              small
-              class="getintouch-button"
-              @click="dialog=true"
-            >
-             GET IN TOUCH
-            </v-btn>
-            <v-dialog
-              v-model="dialog"
-              max-width="400"
-            >
-              <v-card rounded="lg">
-                <v-card-title class="text-h6">
-                  Get in touch
-                </v-card-title>
-
-                <v-card-text>
-                  <div>
-                    <v-icon color="black" >
-                      mdi-email-outline
-                    </v-icon>
-
-                    <div>
-                      <div class="text-caption text-grey">
-                        Email
-                      </div>
-                      <div>
-                        chayanon.ban@one.th
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <v-icon color="black" >
-                      mdi-phone-outline
-                    </v-icon>
-
-                    <div>
-                      <div class="text-caption text-grey">
-                        Phone
-                      </div>
-                      <div>
-                        061-741-1604
-                      </div>
-                    </div>
-                  </div>
-                </v-card-text>
-
-                <v-card-actions>
-                  <v-spacer />
-
-                  <v-btn
-                    variant="text"
-                    color="error"
-                    @click="dialog = false"
-                  >
-                    Close
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-dialog>
-          </div>
-        </v-col>
-      </v-row>
-  
+      <div class="product-price">
+        ฿{{ product.price }}
+      </div>
     </v-card-text>
   </v-card>
 </template>
 
-<script >
+<script>
 export default {
-  name: 'ProfileInfo',
-  data(){
-    return {
-      dialog: false
+  name: 'ProductCard',
+
+  props: {
+    product: {
+      type: Object,
+      required: true
     }
   }
 }
 </script>
 
 <style scoped>
-.info-card {
-  background: #ffffff;
+.product-card {
+  border-radius: 18px;
+  overflow: hidden;
 }
 
-.name {
-  font-size: 20px;
-  font-weight: 700;
-  color: #222222;
+.product-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
-.username {
-  margin-top: 2px;
-  font-size: 13px;
-  color: #999999;
+.product-name {
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.actions {
-  display: flex;
-  align-items: center;
-  gap: 4px;
+.product-description {
+  margin-top: 6px;
+  color: #777;
+  font-size: 14px;
 }
 
-.getintouch-button {
-  min-width: 75px;
-  height: 30px;
-  border-radius: 8px;
-  text-transform: none;
-  font-size: 12px ;
-  background-color: #222222;
-  color: #ffffff;
+.product-price {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
 }
 </style>
-
